@@ -32,4 +32,5 @@ Download model from this link: https://drive.google.com/file/d/1ynVTNG_9bVT8IwJ9
 
 We used the ratio to avoid the problem of distance between the eye and the webcam. Plus the ratio is a good indicator of pupil dilation/constriction.
 
+![circler](https://user-images.githubusercontent.com/30341704/57581372-e2d52480-74b6-11e9-9dcb-c21d01eb6078.png)
 
