@@ -37,3 +37,18 @@ We used the ratio to avoid the problem of distance between the eye and the webca
 
 ![circler](https://user-images.githubusercontent.com/30341704/57581372-e2d52480-74b6-11e9-9dcb-c21d01eb6078.png)
 
+# 4. Run the application
+
+Clone the repo, then in your Terminal you type:
+
+```
+source activate tf-gpu
+```
+For now it works with GPU, but we will try to make it works with CPU in the future.
+
+Then to start the session:
+```
+python videoedit.py --o test
+```
+
+NB: if you have a problem running the App, please check the requirements.
