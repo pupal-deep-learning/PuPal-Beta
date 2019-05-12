@@ -21,10 +21,13 @@ The approach was divided in 3 main parts:
 
 # 2. Iris segmentation with Unet
 
-Unet architecture was used to train a deep learning network. The resulting model transform the eye region into a segmented picture. 
+Unet architecture was used to train a deep learning network. The resulting model transforms the eye region into a segmented picture. 
 
 ![segmentation](https://user-images.githubusercontent.com/30341704/57581351-88d45f00-74b6-11e9-87e3-5f45c3c022c8.png)
 
+- Architecture: Unet (described here: https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)
+- Loss: Jaccard index (also called Intersection over Union, https://en.wikipedia.org/wiki/Jaccard_index)
+- Metrics: Jaccard index and Structural Similarity SSIM (https://en.wikipedia.org/wiki/Structural_similarity)
 
 Download model from this link: https://drive.google.com/file/d/1ynVTNG_9bVT8IwJ9GWCeT2DiwW9Q5zV4/view?usp=sharing
 
