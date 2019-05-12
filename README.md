@@ -13,16 +13,23 @@ The approach was divided in 3 main parts:
 
 ![strategy](https://user-images.githubusercontent.com/30341704/57581277-71e13d00-74b5-11e9-8459-42e4af00b4a4.png)
 
-**1. Eye capture**
+# 1. Eye capture
+
+![eye_capture](https://user-images.githubusercontent.com/30341704/57581349-7e19ca00-74b6-11e9-871a-b2e312ef71ee.png)
 
 
-**2. Iris segmentation with Unet**
+
+# 2. Iris segmentation with Unet
+
 Unet architecture was used to train a deep learning network. The resulting model transform the eye region into a segmented picture. 
+
+![segmentation](https://user-images.githubusercontent.com/30341704/57581351-88d45f00-74b6-11e9-87e3-5f45c3c022c8.png)
 
 
 Download model from this link: https://drive.google.com/file/d/1ynVTNG_9bVT8IwJ9GWCeT2DiwW9Q5zV4/view?usp=sharing
 
-**3. Measure pupil/iris ratio**
+# 3. Measure pupil/iris ratio
+
 We used the ratio to avoid the problem of distance between the eye and the webcam. Plus the ratio is a good indicator of pupil dilation/constriction.
 
 
