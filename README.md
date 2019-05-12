@@ -17,7 +17,9 @@ The approach was divided in 3 main parts:
 
 ![eye_capture](https://user-images.githubusercontent.com/30341704/57581349-7e19ca00-74b6-11e9-871a-b2e312ef71ee.png)
 
+- Haar cascade source: https://github.com/opencv/opencv/tree/master/data/haarcascades
 
+We are working in a new and better eye detection Haar Cascade. Once ready we will make it available.
 
 # 2. Iris segmentation with Unet
 
@@ -39,16 +41,31 @@ We used the ratio to avoid the problem of distance between the eye and the webca
 
 # 4. Run the application
 
-Clone the repo, then in your Terminal you type:
+Clone the repo and download the model (see link above) and save it in the pupal-app folder. To run the app you have two options:
+- live with a webcam
+- using pre-recorded video.
 
-```
-source activate tf-gpu
-```
-For now it works with GPU, but we will try to make it works with CPU in the future.
+**Live Webcam**
 
-Then to start the session:
+To run the code live, using a webcam, type in your Terminal:
 ```
-python videoedit.py --o test
+python main-webcam.py --o test
 ```
+
+**Pre-recorded video**
+
+Put a video in the videos folder and run the terminal:
+```
+python main-video.py --o test
+```
+
+# 5. Recommendations
+
+The app runs on both CPU and GPU, but runs much better in a GPU with CUDA.
+If you have a GPU with CUDA installing tensorflow-gpu is recommended.
+
+If you are using linux (Ubunbtu 18.04 or above) you can check this tutorial to install and use tensorflow-gpu in a safe and simple way:
+https://www.pugetsystems.com/labs/hpc/Install-TensorFlow-with-GPU-Support-the-Easy-Way-on-Ubuntu-18-04-without-installing-CUDA-1170/
+You may need to install some requirements again in the conda environment.
 
 NB: if you have a problem running the App, please check the requirements.
