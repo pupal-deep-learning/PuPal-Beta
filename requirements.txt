@@ -1,0 +1,11 @@
+ipython==7.2.0 #python3.7
+torch==0.4.0
+numpy==1.15.0
+tqdm==4.19.4
+opencv-python==4.0.0.21
+tensorflow==1.13.0rc2
+Keras==2.2.4
+Keras-Applications==1.0.6
+keras-contrib==2.0.8
+Keras-Preprocessing==1.0.5
+scikit-image==0.14.1
