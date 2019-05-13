@@ -122,7 +122,7 @@ def trainGenerator(batch_size,train_path,image_folder,mask_folder,aug_dict,img_p
         save_to_dir = save_to_dir,
         save_prefix  = mask_save_prefix,
         seed = seed)
-    train_generator = zip(image_generator, mask_generator)
+    train_generator = zip(image_generator, mask_generator) # create a tuple
     for (img,mask) in train_generator:
         img,mask = adjustData(img,mask,flag_multi_class,num_class)
         img,mask = crop(img, target_size), crop(mask, target_size)
