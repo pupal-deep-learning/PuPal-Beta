@@ -52,14 +52,14 @@ To run the code live, using a webcam, go to pupal-app folder and type in your te
 python pupal-webcam.py
 ```
 
-Your webcam devices will be listed and you will be asked to selected and introduce your webcam device numner.
-Typically it will be 0, but if you have more than one webcam selected the one you prefer 0 or 1.
+Your webcam devices will be listed and you will be asked to selected and introduce the device number you want to use.
+Typically it will be 0 for built-in webcams, but if you have more than one webcam selected between 0 or 1.
 
-It will also give you an option to save the results into text file which you can use to analysise the results.
+It will also give you an option to save the results into a text file which you can use to analyse the results.
 
 Selected the best distance and position from the webcam so that proper measurements can be recorded.
 
-The webcam video will be visible as well as the predicton and ratios being measured. That will help you to select the best webcam position and show what the app is measuring.
+The webcam live video will be visible as well as the predictons and ratios being calculated. This will help you to select the best webcam position and distance and show you what the app is measuring.
 
 
 **Pre-Recorded Video**
@@ -69,7 +69,7 @@ An option to analise pre-recorded video is being prepared and will be available 
 
 # 5. Recommendations
 
-The app runs on both CPU and GPU, however the use of a GPU with CUDA is advised.
+The app runs on both CPU and GPU, however the use of a GPU with CUDA is higly recommended.
 If you have a GPU with CUDA make sure to have the proper card drivers and CUDA installed.
 
 Also tensorflow-gpu will be necessary: https://www.tensorflow.org/install/gpu
