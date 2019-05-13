@@ -41,9 +41,10 @@ We used the ratio to avoid the problem of distance between the eye and the webca
 
 # 4. Run the application
 
-Clone the repo and download the model (see link above) to pupal-app folder. To run the app you have two options:
+Download the model (see link above). Clone the repo onto to your computer and place the model.h5 into the pupal-app folder. 
+To run the app you have two options:
 - live with a webcam
-- using pre-recorded video.
+- using pre-recorded video (we are working on it... To come soon)
 
 **Live Webcam**
 
@@ -66,7 +67,7 @@ The webcam live video will be visible as well as the predictons and ratios being
 
 **Pre-Recorded Video**
 
-An option to analise pre-recorded video is being prepared and will be available soon.
+An option to analyse pre-recorded video is being prepared and will be available soon.
 
 
 # 5. Recommendations
@@ -76,7 +77,7 @@ If you have a GPU with CUDA make sure to have the proper card drivers and CUDA i
 
 Also tensorflow-gpu will be necessary: https://www.tensorflow.org/install/gpu
 
-If you are using linux (Ubunbtu 18.04 or above) you can check this tutorial to install and use tensorflow-gpu in a safe and simple way withou the need to install CUDA:
+If you are using linux (Ubunbtu 18.04 or above) you can check this tutorial to install and use tensorflow-gpu in a safe and simple way without the need to install CUDA:
 
 https://www.pugetsystems.com/labs/hpc/Install-TensorFlow-with-GPU-Support-the-Easy-Way-on-Ubuntu-18-04-without-installing-CUDA-1170/
 
