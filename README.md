@@ -41,34 +41,43 @@ We used the ratio to avoid the problem of distance between the eye and the webca
 
 # 4. Run the application
 
-Clone the repo and download the model (see link above) and save it in the pupal-app folder. To run the app you have two options:
+Clone the repo and download the model (see link above) to pupal-app folder. To run the app you have two options:
 - live with a webcam
 - using pre-recorded video.
 
 **Live Webcam**
 
-To run the code live, using a webcam, type in your Terminal:
+To run the code live, using a webcam, go to pupal-app folder and type in your terminal:
 ```
-python main-webcam.py --o test
+python pupal-webcam.py
 ```
+
+Your webcam devices will be listed and you will be asked to selected and introduce your webcam device numner.
+Typically it will be 0, but if you have more than one webcam selected the one you prefer 0 or 1.
+
+It will also give you an option to save the results into text file which you can use to analysise the results.
+
+Selected the best distance and position from the webcam so that proper measurements can be recorded.
+
+The webcam video will be visible as well as the predicton and ratios being measured. That will help you to select the best webcam position and show what the app is measuring.
+
 
 **Pre-Recorded Video**
 
-Put a video in the videos folder and run in the terminal:
-```
-python main-video.py --o test
-```
+An option to analise pre-recorded video is being prepared and will be available soon.
+
 
 # 5. Recommendations
 
-The app runs on both CPU and GPU, but runs much better in a GPU with CUDA.
-If you have a GPU with CUDA installing tensorflow-gpu is recommended.
+The app runs on both CPU and GPU, however the use of a GPU with CUDA is advised.
+If you have a GPU with CUDA make sure to have the proper card drivers and CUDA installed.
 
-If you are using linux (Ubunbtu 18.04 or above) you can check this tutorial to install and use tensorflow-gpu in a safe and simple way:
+Also tensorflow-gpu will be necessary: https://www.tensorflow.org/install/gpu
+
+If you are using linux (Ubunbtu 18.04 or above) you can check this tutorial to install and use tensorflow-gpu in a safe and simple way withou the need to install CUDA:
 
 https://www.pugetsystems.com/labs/hpc/Install-TensorFlow-with-GPU-Support-the-Easy-Way-on-Ubuntu-18-04-without-installing-CUDA-1170/
 
 You may need to install some requirements again in the conda environment.
-
 
 NB: if you have a problem running the App, please check the requirements.
