@@ -8,37 +8,24 @@ from keras.layers import *
 from keras.optimizers import *
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from keras import backend as keras
-#import keras.backend as K
+import keras.backend as K
 from keras_contrib.losses.jaccard import jaccard_distance
 from keras_contrib.losses.dssim import DSSIMObjective
 import cv2 
-import tensorflow as tf
+
 
 def jaccard_metric(y_true, y_pred):
-    #if not y_true.shape == y_pred.shape:
-    #    y_true = cv2.resize(y_true,(y_pred.shape[1],y_pred.shape[0]), interpolation = cv2.INTER_LANCZOS4)
     intersection = K.sum(K.abs(y_true * y_pred), axis=-1)
     sum_ = K.sum(K.abs(y_true) + K.abs(y_pred), axis=-1)
     jac = (intersection+100) / (sum_ - intersection+100)
-    #print(session.run(x))
     return jac
 
-"""
-def ssim(img1, img2):
-    # resizing the images to same dimensions
-    if img1.shape != img2.shape:
-        img2 = cv2.resize(img2,(img1.shape[1], img1.shape[0]), 
-                                    interpolation = cv2.INTER_LANCZOS4)
 
-    # put array into a format compatible to run the calculations with tensorflow
-    img1 = torch.from_numpy(np.rollaxis(img1, 2)).float().unsqueeze(0)/255.0
-    img2 = torch.from_numpy(np.rollaxis(img2, 2)).float().unsqueeze(0)/255.0
+def ssim_keras(y_true, y_pred):
+       dssim = DSSIMObjective()
+       dssim = dssim(y_true, y_pred)
+       return (1 - 2 * dssim)
 
-    # ssim calculation (return a tensor)
-    ssim=pytorch_ssim.ssim(img1, img2)
-
-    return ssim.item() # to get the value from the tensor
-"""
 
 def unet(pretrained_weights = None,input_size = (256,256,1)):
     keras.clear_session()
@@ -85,9 +72,9 @@ def unet(pretrained_weights = None,input_size = (256,256,1)):
 
     model = Model(inputs = inputs, outputs = conv10)
 
-    model.compile(optimizer = Adam(lr = 1e-4), loss = jaccard_distance, metrics = ["accuracy", jaccard_metric])
+    model.compile(optimizer = Adam(lr = 1e-4), loss = jaccard_distance, metrics = ["accuracy", jaccard_metric, ssim_keras])
 
-    #model.summary()
+    #model.summary() # if you want to have an overview of the architecture
 
     if(pretrained_weights):
     	model.load_weights(pretrained_weights)
