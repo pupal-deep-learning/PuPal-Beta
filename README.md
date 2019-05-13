@@ -61,6 +61,8 @@ Selected the best distance and position from the webcam so that proper measureme
 
 The webcam live video will be visible as well as the predictons and ratios being calculated. This will help you to select the best webcam position and distance and show you what the app is measuring.
 
+![image_w_predictions](https://user-images.githubusercontent.com/47978862/57651181-ea86ed00-75cc-11e9-8ad2-c7da48e11bde.jpg)
+
 
 **Pre-Recorded Video**
 
