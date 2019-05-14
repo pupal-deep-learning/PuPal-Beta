@@ -10,15 +10,15 @@ from datetime import datetime
 
 sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
-print("\nThis are your available webcams:")
+print("\nThese are your available webcams:")
 os.system("ls -ltrh /dev/video*")
 
 webcam = input("\nPlease choose the device number you want to use (0 / 1): ")
 
-createFile = input("Do you wish to save a log file of the results? (y / n)): ")
+createFile = input("\nDo you wish to save a log file of the results? (y / n)): ")
 
 if createFile == 'y':
-    fileName = input('Please write the file name: ')
+    fileName = input('\nPlease write the file name: ')
 
 # OpenCV webcam vars
 eye_cascade = cv2.CascadeClassifier('./haar/haarcascade_eye_tree_eyeglasses.xml')
@@ -160,7 +160,10 @@ while success:
     success,image = cap.read()
 
 def genFile(createFile, time_list, ratios_list, fileName = ""):
-    
+    """
+    Having the time stamps and calculated ratios as inputs
+    returns a log file with the time and ratios.
+    """
     if createFile == 'y':
         newFile = open(fileName + ".txt", 'w')
         newFile.write("DateTime,Ratio" + "\n")
