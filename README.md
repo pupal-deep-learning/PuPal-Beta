@@ -2,13 +2,13 @@
 
 **Objective:**
 
-PuPal is a deep learning application for segmentation of the iris from visible light images typically from portable devices.
+PuPal is a deep learning application for segmentation of the pupil and iris from visible light images typically from portable devices.
 
 **Overview** 
 
 The approach was divided in 3 main parts: 
 1. Capture of the eyes by Haar Cascade from a webcam
-2. Segmentation of the iris (which also underline the pupil)
+2. Segmentation of the pupil and iris by deep learning approach
 3. Algorithm fitting circles around the iris and the pupil to measure pupil/iris ratio
 
 ![strategy](https://user-images.githubusercontent.com/30341704/57581277-71e13d00-74b5-11e9-8459-42e4af00b4a4.png)
@@ -21,7 +21,7 @@ The approach was divided in 3 main parts:
 
 We are working in a new and better eye detection Haar Cascade. Once ready we will make it available.
 
-# 2. Iris segmentation with Unet
+# 2. Pupil/iris segmentation with Unet
 
 Unet architecture was used to train a deep learning network. The resulting model transforms the eye region into a segmented picture. 
 
