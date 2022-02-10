@@ -3,7 +3,7 @@ torch==0.4.0
 numpy==1.15.0
 tqdm==4.19.4
 opencv-python==4.0.0.21
-tensorflow==1.13.0rc2
+tensorflow==2.5.3
 Keras==2.2.4
 Keras-Applications==1.0.6
 keras-contrib==2.0.8
