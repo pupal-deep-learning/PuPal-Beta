@@ -1,6 +1,6 @@
 ipython==7.2.0 #python3.7
 torch==0.4.0
-numpy==1.15.0
+numpy==1.22.0
 tqdm==4.19.4
 opencv-python==4.0.0.21
 tensorflow==1.13.0rc2
